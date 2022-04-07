@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Maket"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF383838">
+        Title="MainWindow" Height="450" Width="800" Background="#FF595959">
     <Window.Resources>
         <ControlTemplate x:Key="CornerButton" TargetType="{x:Type ButtonBase}">
             <Border CornerRadius="3" x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
@@ -26,12 +26,18 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right">
-            <Button Content="Save Data" Template="{DynamicResource CornerButton}"/>
-            <Button Content="Close" Template="{DynamicResource CornerButton}"/>
+        <Border Grid.Row="2" Margin="3" Background="#FF424242">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Save Data" Template="{DynamicResource CornerButton}"/>
+                <Button Content="Close" Template="{DynamicResource CornerButton}"/>
+            </StackPanel>
+        </Border>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Customer Search" Style="{DynamicResource ResourceKey=tbWhite}" FontSize="30" Opacity="0.5"/>
+            <TextBlock Text="Edit Customer" Style="{DynamicResource ResourceKey=tbWhite}" FontSize="30"/>
         </StackPanel>
 
-        <Grid Grid.Row="3" >
+        <Grid Grid.Row="3" Margin="3" Background="#FF424242">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />

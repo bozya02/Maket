@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Maket"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="ArialLight"/>
+        </Style>
         <Style x:Key="tbWhite">
             <Setter Property="TextBlock.Foreground" Value="White"/>
             <Setter Property="TextBlock.VerticalAlignment" Value="Center"/>
